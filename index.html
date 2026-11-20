@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
     <title>Ulrich FOSSO LIENOU — Full Stack Developer · DevSecOps</title>
-    <meta name="description" content="Ulrich FOSSO LIENOU — computer engineering student at 3iL Ingénieurs in Limoges, France (security track). Full stack developer: Java, Spring Boot, Angular, AI integration and application security. Looking for a software engineering internship from June 2027.">
+    <meta name="description" content="Ulrich FOSSO LIENOU — élève ingénieur en informatique à 3iL Ingénieurs (Limoges, parcours sécurité). Développeur full stack : Java, Spring Boot, Angular, intégration IA et sécurité applicative. Recherche un stage en développement logiciel à partir de juin 2027.">
     <meta name="author" content="Ulrich FOSSO LIENOU">
     <link rel="canonical" href="https://ulrichjack.github.io/">
 
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Ulrich FOSSO LIENOU — Full Stack Developer · DevSecOps">
-    <meta property="og:description" content="Computer engineering student at 3iL Ingénieurs (Limoges, security track). Java, Spring Boot, Angular, AI integration, application security. Internship from June 2027.">
+    <meta property="og:description" content="Élève ingénieur en informatique à 3iL Ingénieurs (Limoges, parcours sécurité). Java, Spring Boot, Angular, intégration IA, sécurité applicative. Stage à partir de juin 2027.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ulrichjack.github.io/">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:image" content="https://ulrichjack.github.io/assets/photo.webp">
-    <meta property="og:image:alt" content="Portrait of Ulrich FOSSO LIENOU">
+    <meta property="og:image:alt" content="Portrait d'Ulrich FOSSO LIENOU">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,25 +31,30 @@
   <nav>
     <span class="logo">UF</span>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Parcours</a></li>
+      <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li class="lang-switch" role="group" aria-label="Langue du site / Site language">
+        <button type="button" class="lang-btn is-active" data-lang="fr" aria-pressed="true" lang="fr">FR</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </li>
     </ul>
   </nav>
 
   <!-- 2. HERO -->
   <section id="hero" class="hero">
     <div class="hero-content">
-      <p class="greeting">Hi. I'm</p>
+      <p class="greeting" data-i18n="hero.greeting">Salut. Moi c'est</p>
       <h1 id="typed-name">ULRICH FOSSO LIENOU</h1>
-      <p class="subtitle">Full Stack Developer (Java · Spring Boot · Angular) · AI Integration · Application Security &amp; DevSecOps</p>
-      <p class="location">📍 Limoges, France · 3iL Ingénieurs — Computer Engineering, security track (2nd year)</p>
+      <p class="subtitle" data-i18n="hero.subtitle">Développeur Full Stack (Java · Spring Boot · Angular) · Intégration IA · Sécurité applicative &amp; DevSecOps</p>
+      <p class="location" data-i18n="hero.location">📍 Limoges, France · 3iL Ingénieurs — Cycle ingénieur informatique, parcours sécurité (2e année)</p>
 
       <div class="hero-cta">
-        <a href="#projects" class="btn-primary">View Projects →</a>
-        <a href="#contact" class="btn-secondary">Contact me</a>
+        <a href="#projects" class="btn-primary" data-i18n="hero.cta.projects">Voir les projets →</a>
+        <a href="#contact" class="btn-secondary" data-i18n="hero.cta.contact">Me contacter</a>
       </div>
     </div>
   </section>
@@ -56,31 +63,31 @@
   <!-- 3. ABOUT -->
   <section id="about" class="bg-surface">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+      <h2 class="section-title" data-i18n="about.title">À propos</h2>
 
       <div class="about-grid">
         <div class="about-image">
-          <img src="assets/photo.webp" alt="Portrait of Ulrich FOSSO LIENOU" class="avatar" width="300" height="400">
+          <img src="assets/photo.webp" alt="Portrait d'Ulrich FOSSO LIENOU" data-i18n-alt="alt.photo" class="avatar" width="300" height="400">
         </div>
 
         <div class="about-text">
-          <p>I build full-stack applications that solve real problems — one of them runs every day in a family business in Cameroon.</p>
-          <p>I'm in my second year of the computer engineering cycle at <strong>3iL Ingénieurs</strong> in Limoges, France, on the <strong>security track</strong> (2026–2027). Before that I studied at Institut Universitaire de la Côte (IUC) in Douala, Cameroon: integrated preparatory classes and the first year of the engineering cycle.</p>
-          <p>I'm looking for a <strong>software engineering internship starting June 2027</strong>, in Java or full stack, ideally with a security dimension.</p>
-          <p>My focus: <strong>Spring Boot + Angular + AI integration + application security.</strong></p>
+          <p data-i18n="about.p1">Je construis des applications full stack qui résolvent de vrais problèmes — l'une d'elles tourne tous les jours dans une entreprise familiale au Cameroun.</p>
+          <p data-i18n="about.p2">Je suis en 2e année du cycle ingénieur en informatique à <strong>3iL Ingénieurs</strong>, à Limoges, en <strong>parcours sécurité</strong> (2026-2027). Avant cela, j'ai étudié à l'Institut Universitaire de la Côte (IUC) à Douala, au Cameroun : classe préparatoire intégrée puis 1re année du cycle ingénieur.</p>
+          <p data-i18n="about.p3">Je recherche un <strong>stage en développement logiciel à partir de juin 2027</strong>, en Java ou full stack, idéalement avec une dimension sécurité.</p>
+          <p data-i18n="about.p4">Mon axe : <strong>Spring Boot + Angular + intégration IA + sécurité applicative.</strong></p>
 
           <div class="stats-row">
             <div class="stat">
               <span class="count">20+</span>
-              <span class="stat-label">GitHub repositories</span>
+              <span class="stat-label" data-i18n="stat.repos">Dépôts GitHub</span>
             </div>
             <div class="stat">
               <span class="count">2</span>
-              <span class="stat-label">Internships completed</span>
+              <span class="stat-label" data-i18n="stat.internships">Stages effectués</span>
             </div>
             <div class="stat">
               <span class="count">1</span>
-              <span class="stat-label">App in production</span>
+              <span class="stat-label" data-i18n="stat.production">Application en production</span>
             </div>
           </div>
         </div>
@@ -91,14 +98,14 @@
   <!-- 4. PROJECTS -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
+      <h2 class="section-title" data-i18n="projects.title">Projets</h2>
 
       <div class="projects-grid">
 
         <!-- Projet 1 : FishCam -->
         <article class="project-card">
           <div class="card-header">
-            <span class="badge badge-coral">In Production</span>
+            <span class="badge badge-coral" data-i18n="badge.production">En production</span>
             <span class="card-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
@@ -108,12 +115,12 @@
             </span>
           </div>
           <h3>FishCam</h3>
-          <p class="card-why"><em>Fish shop management — built for a family business and used daily.</em></p>
-          <p>Purchase tracking, cash and credit sales, till monitoring, role-based access control and PDF reports.</p>
+          <p class="card-why" data-i18n="fishcam.why"><em>Gestion de poissonnerie — développée pour une entreprise familiale et utilisée au quotidien.</em></p>
+          <p data-i18n="fishcam.desc">Suivi des achats, opérations au comptant et à crédit, suivi de caisse, gestion des accès par rôles et rapports PDF.</p>
           <!-- TODO: captures FishCam — déposer les images dans assets/fishcam/ puis décommenter le bloc ci-dessous -->
           <!--
           <div class="card-media">
-            <img src="assets/fishcam/screenshot-1.png" alt="FishCam screen showing daily sales and till tracking" loading="lazy">
+            <img src="assets/fishcam/screenshot-1.png" alt="Écran FishCam montrant le suivi des ventes et de la caisse" loading="lazy">
           </div>
           -->
           <div class="card-stack">Java · Spring Boot · Spring Security · JWT · Angular · PostgreSQL</div>
@@ -126,7 +133,7 @@
         <!-- Projet 2 : AgroNet -->
         <article class="project-card">
           <div class="card-header">
-            <span class="badge badge-green">AI · Vision</span>
+            <span class="badge badge-green" data-i18n="badge.vision">IA · Vision</span>
             <span class="card-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M12 22v-7-4" />
@@ -136,8 +143,8 @@
             </span>
           </div>
           <h3>AgroNet</h3>
-          <p class="card-why"><em>Cassava disease detection, designed for Cameroonian farmers.</em></p>
-          <p>Android app that identifies diseases from photos of cassava leaves, with an on-device image classification model.</p>
+          <p class="card-why" data-i18n="agronet.why"><em>Détection des maladies du manioc, pensée pour les agriculteurs camerounais.</em></p>
+          <p data-i18n="agronet.desc">Application Android qui identifie des maladies à partir de photos de feuilles de manioc, avec un modèle de classification d'images embarqué.</p>
           <div class="card-stack">Kotlin · Android · Python · TensorFlow Lite · EfficientNetV2</div>
           <div class="card-links">
             <a href="https://github.com/Ulrichjack/AgroNet" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
@@ -147,7 +154,7 @@
         <!-- Projet 3 : Correct -->
         <article class="project-card">
           <div class="card-header">
-            <span class="badge badge-green">AI · LLM</span>
+            <span class="badge badge-green" data-i18n="badge.llm">IA · LLM</span>
             <span class="card-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polyline points="9 11 12 14 22 4"></polyline>
@@ -156,9 +163,9 @@
             </span>
           </div>
           <h3>Correct</h3>
-          <p class="card-why"><em>AI-assisted grading of student exercises.</em></p>
-          <p>Web app that compares student answers with reference solutions and drafts correction suggestions using a language model (Groq API).</p>
-          <div class="card-stack">Python · FastAPI · Groq API · Angular · TypeScript</div>
+          <p class="card-why" data-i18n="correct.why"><em>Correction d'exercices assistée par IA.</em></p>
+          <p data-i18n="correct.desc">Application web qui compare les réponses des étudiants à des corrigés de référence et génère des propositions de correction avec un modèle de langage (API Groq).</p>
+          <div class="card-stack">Python · FastAPI · API Groq · Angular · TypeScript</div>
           <div class="card-links">
             <a href="https://github.com/Ulrichjack/correct" target="_blank" rel="noopener noreferrer">Backend ↗</a>
             <a href="https://github.com/Ulrichjack/correct-frontend" target="_blank" rel="noopener noreferrer">Frontend ↗</a>
@@ -178,8 +185,8 @@
             </span>
           </div>
           <h3>Institut App</h3>
-          <p class="card-why"><em>Automated email notifications built in.</em></p>
-          <p>Web application for managing an institute, with automatic email sending (JavaMailSender).</p>
+          <p class="card-why" data-i18n="institut.why"><em>Envoi automatique d'e-mails intégré.</em></p>
+          <p data-i18n="institut.desc">Application web de gestion d'un institut, avec envoi automatique d'e-mails (JavaMailSender).</p>
           <div class="card-stack">Java · Spring Boot · Angular · MySQL</div>
           <div class="card-links">
             <a href="https://github.com/Ulrichjack/institut-app-backend" target="_blank" rel="noopener noreferrer">Backend ↗</a>
@@ -190,7 +197,7 @@
         <!-- Projet 5 : ShopTrack -->
         <article class="project-card">
           <div class="card-header">
-            <span class="badge badge-amber">MVP in progress</span>
+            <span class="badge badge-amber" data-i18n="badge.mvp">MVP en cours</span>
             <span class="card-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <circle cx="9" cy="21" r="1"></circle>
@@ -200,8 +207,8 @@
             </span>
           </div>
           <h3>ShopTrack</h3>
-          <p class="card-why"><em>Sales and till tracking, on mobile.</em></p>
-          <p>Mobile app for sales tracking and cash register management, with a local Drift database and a Supabase backend.</p>
+          <p class="card-why" data-i18n="shoptrack.why"><em>Suivi des ventes et de la caisse, sur mobile.</em></p>
+          <p data-i18n="shoptrack.desc">Application mobile de suivi des ventes et de gestion de caisse, avec une base locale Drift et un backend Supabase.</p>
           <div class="card-stack">Flutter · Dart · Supabase · Drift</div>
           <div class="card-links">
             <a href="https://github.com/Ulrichjack/shopTrack" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
@@ -210,8 +217,8 @@
 
       </div>
        <div class="projects-footer">
-        <a href="https://github.com/Ulrichjack" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-          View all projects on GitHub →
+        <a href="https://github.com/Ulrichjack" target="_blank" rel="noopener noreferrer" class="btn-secondary" data-i18n="projects.all">
+          Voir tous les projets sur GitHub →
         </a>
       </div>
     </div>
@@ -220,31 +227,31 @@
   <!-- 5. EXPERIENCE -->
   <section id="experience">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title" data-i18n="experience.title">Parcours professionnel</h2>
 
       <div class="experience-list">
 
         <article class="job">
           <div class="job-header">
-            <h3>Software Development Intern</h3>
-            <span class="job-date">Jul – Sep 2026</span>
+            <h3 data-i18n="job.title">Stagiaire en développement informatique</h3>
+            <span class="job-date" data-i18n="job1.date">Juil. – Sept. 2026</span>
           </div>
-          <p class="job-company">BAJ Service SA · Douala, Cameroon</p>
+          <p class="job-company" data-i18n="job1.company">BAJ Service SA · Douala, Cameroun</p>
           <ul class="job-tasks">
-            <li>Built a Python application that retrieves attendance data from Dahua time clocks for the HR team.</li>
-            <li>Built three showcase websites with Astro.</li>
+            <li data-i18n="job1.task1">Développement d'une application Python de récupération des données de présence depuis des pointeuses Dahua, pour les RH.</li>
+            <li data-i18n="job1.task2">Création de trois sites vitrine avec Astro.</li>
           </ul>
         </article>
 
         <article class="job">
           <div class="job-header">
-            <h3>Software Development Intern</h3>
-            <span class="job-date">May – Aug 2025</span>
+            <h3 data-i18n="job.title">Stagiaire en développement informatique</h3>
+            <span class="job-date" data-i18n="job2.date">Mai – Août 2025</span>
           </div>
-          <p class="job-company">NGOMBE SARL · Douala, Cameroon</p>
+          <p class="job-company" data-i18n="job2.company">NGOMBE SARL · Douala, Cameroun</p>
           <ul class="job-tasks">
-            <li>Built a full-stack payroll management application with Spring Boot, Angular and MySQL.</li>
-            <li>Implemented JWT authentication.</li>
+            <li data-i18n="job2.task1">Développement d'une application full stack de gestion de la paie avec Spring Boot, Angular et MySQL.</li>
+            <li data-i18n="job2.task2">Mise en place de l'authentification JWT.</li>
           </ul>
         </article>
 
@@ -255,50 +262,50 @@
   <!-- 6. STACK -->
   <section id="stack" class="bg-surface">
     <div class="container">
-      <h2 class="section-title">Tech Stack</h2>
+      <h2 class="section-title" data-i18n="stack.title">Stack technique</h2>
 
       <div class="stack-container">
 
         <div class="stack-group">
-          <p class="group-label">Backend</p>
-          <img src="https://skillicons.dev/icons?i=java,spring,python,fastapi" alt="Backend technology icons: Java, Spring, Python, FastAPI" class="skill-img" loading="lazy">
-          <p class="group-list">Java · Spring Boot · Spring Security · Python · FastAPI · REST APIs</p>
+          <p class="group-label" data-i18n="stack.backend">Backend</p>
+          <img src="https://skillicons.dev/icons?i=java,spring,python,fastapi" alt="Icônes des technologies backend : Java, Spring, Python, FastAPI" data-i18n-alt="alt.backend" class="skill-img" loading="lazy">
+          <p class="group-list" data-i18n="stack.backend.list">Java · Spring Boot · Spring Security · Python · FastAPI · API REST</p>
         </div>
 
         <div class="stack-group">
-          <p class="group-label">Frontend</p>
-          <img src="https://skillicons.dev/icons?i=angular,ts,js,html,css" alt="Frontend technology icons: Angular, TypeScript, JavaScript, HTML, CSS" class="skill-img" loading="lazy">
+          <p class="group-label" data-i18n="stack.frontend">Frontend</p>
+          <img src="https://skillicons.dev/icons?i=angular,ts,js,html,css" alt="Icônes des technologies frontend : Angular, TypeScript, JavaScript, HTML, CSS" data-i18n-alt="alt.frontend" class="skill-img" loading="lazy">
           <p class="group-list">Angular · TypeScript · JavaScript · HTML · CSS</p>
         </div>
 
         <div class="stack-group">
-          <p class="group-label">Mobile</p>
-          <img src="https://skillicons.dev/icons?i=kotlin,android,flutter" alt="Mobile technology icons: Kotlin, Android, Flutter" class="skill-img" loading="lazy">
+          <p class="group-label" data-i18n="stack.mobile">Mobile</p>
+          <img src="https://skillicons.dev/icons?i=kotlin,android,flutter" alt="Icônes des technologies mobiles : Kotlin, Android, Flutter" data-i18n-alt="alt.mobile" class="skill-img" loading="lazy">
           <p class="group-list">Kotlin · Android · Flutter</p>
         </div>
 
         <div class="stack-group">
-          <p class="group-label">Databases</p>
-          <img src="https://skillicons.dev/icons?i=postgres,mysql,supabase" alt="Database technology icons: PostgreSQL, MySQL, Supabase" class="skill-img" loading="lazy">
+          <p class="group-label" data-i18n="stack.databases">Bases de données</p>
+          <img src="https://skillicons.dev/icons?i=postgres,mysql,supabase" alt="Icônes des bases de données : PostgreSQL, MySQL, Supabase" data-i18n-alt="alt.databases" class="skill-img" loading="lazy">
           <p class="group-list">PostgreSQL · MySQL · Supabase</p>
         </div>
 
         <div class="stack-group">
-          <p class="group-label">AI</p>
-          <img src="https://skillicons.dev/icons?i=tensorflow" alt="AI technology icon: TensorFlow" class="skill-img" loading="lazy">
-          <p class="group-list">TensorFlow Lite · EfficientNetV2 · Groq API</p>
+          <p class="group-label" data-i18n="stack.ai">IA</p>
+          <img src="https://skillicons.dev/icons?i=tensorflow" alt="Icône de technologie IA : TensorFlow" data-i18n-alt="alt.ai" class="skill-img" loading="lazy">
+          <p class="group-list" data-i18n="stack.ai.list">TensorFlow Lite · EfficientNetV2 · API Groq</p>
         </div>
 
         <div class="stack-group">
-          <p class="group-label">Tools</p>
-          <img src="https://skillicons.dev/icons?i=git,github,linux,postman" alt="Tooling icons: Git, GitHub, Linux, Postman" class="skill-img" loading="lazy">
+          <p class="group-label" data-i18n="stack.tools">Outils</p>
+          <img src="https://skillicons.dev/icons?i=git,github,linux,postman" alt="Icônes des outils : Git, GitHub, Linux, Postman" data-i18n-alt="alt.tools" class="skill-img" loading="lazy">
           <p class="group-list">Git · GitHub · Linux · Postman</p>
         </div>
 
         <div class="stack-group">
-          <p class="group-label">Currently learning</p>
-          <img src="https://skillicons.dev/icons?i=docker,githubactions" alt="Icons of technologies I am currently learning: Docker, GitHub Actions" class="skill-img" loading="lazy">
-          <p class="group-list">Docker · CI/CD (GitHub Actions) · Application security · DevSecOps</p>
+          <p class="group-label" data-i18n="stack.learning">En cours d'apprentissage</p>
+          <img src="https://skillicons.dev/icons?i=docker,githubactions" alt="Icônes des technologies en cours d'apprentissage : Docker, GitHub Actions" data-i18n-alt="alt.learning" class="skill-img" loading="lazy">
+          <p class="group-list" data-i18n="stack.learning.list">Docker · CI/CD (GitHub Actions) · Sécurité applicative · DevSecOps</p>
         </div>
 
       </div>
@@ -308,12 +315,12 @@
   <!-- 7. CONTACT -->
   <section id="contact">
     <div class="container">
-      <h2 class="section-title">Let's work together</h2>
+      <h2 class="section-title" data-i18n="contact.title">Travaillons ensemble</h2>
 
       <div class="contact-content">
-        <p class="contact-sub">
-          Looking for a <strong>software engineering internship from June 2027</strong><br>
-          Java or full stack, ideally with a security dimension · Limoges, France
+        <p class="contact-sub" data-i18n="contact.sub">
+          Je recherche un <strong>stage en développement logiciel à partir de juin 2027</strong><br>
+          En Java ou full stack, idéalement avec une dimension sécurité · Limoges, France
         </p>
 
         <div class="contact-grid">
@@ -346,8 +353,8 @@
           </a>
         </div>
 
-        <blockquote class="quote">
-          "Build things that solve real problems. Secure them. Then scale them."
+        <blockquote class="quote" data-i18n="contact.quote">
+          « Construire des choses qui résolvent de vrais problèmes. Les sécuriser. Puis les faire grandir. »
         </blockquote>
       </div>
     </div>
@@ -355,7 +362,7 @@
 
   <!-- 8. FOOTER -->
   <footer>
-    <p>© 2026 Ulrich FOSSO LIENOU · Hand-coded HTML, CSS &amp; JavaScript · Hosted on GitHub Pages</p>
+    <p data-i18n="footer">© 2026 Ulrich FOSSO LIENOU · Site codé à la main en HTML, CSS &amp; JavaScript · Hébergé sur GitHub Pages</p>
   </footer>
 
      <script src="script.js"></script>

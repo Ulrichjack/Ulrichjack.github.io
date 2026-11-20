@@ -86,11 +86,48 @@ nav a {
     text-decoration: none;
     font-family: var(--font-main);
     font-size: 0.9rem;
+    white-space: nowrap; /* Un libelle ne doit jamais se couper en deux lignes */
     transition: color 0.3s ease; /* Animation douce au survol */
 }
 
 nav a:hover {
     color: var(--accent-green);
+}
+
+/* --- Bascule de langue FR / EN --- */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 6px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    transition: color 0.3s ease; /* Meme animation que les liens de nav */
+}
+
+.lang-btn:hover {
+    color: var(--accent-green);
+}
+
+.lang-btn.is-active {
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
+.lang-sep {
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    opacity: 0.5;
 }
 
 
@@ -579,6 +616,13 @@ footer p {
     nav a {
         font-size: 0.75rem; /* Texte plus petit */
     }
+    .lang-switch {
+        gap: 4px;
+        margin-left: 4px;
+    }
+    .lang-btn, .lang-sep {
+        font-size: 0.75rem;
+    }
 
     /* 2. Fix Hero Section */
     .hero h1 {
@@ -623,7 +667,26 @@ footer p {
     nav ul {
         gap: 8px;
     }
+    nav ul {
+        gap: 6px;
+        min-width: 0;
+        overflow-x: auto; /* Filet de securite sous 360px : on fait defiler plutot que deborder */
+        scrollbar-width: none;
+    }
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
     nav a {
+        font-size: 0.68rem;
+    }
+    .lang-switch {
+        gap: 4px;
+        margin-left: 4px;
+    }
+    .lang-sep {
+        display: none; /* On gagne la place du separateur */
+    }
+    .lang-btn {
         font-size: 0.68rem;
     }
 }
