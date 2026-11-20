@@ -51,40 +51,53 @@ document.querySelectorAll('section:not(#hero)').forEach(section => {
 // =========================================
 // 3. STATS COUNTER ANIMATION
 // =========================================
+// Les vrais chiffres sont ecrits directement dans le HTML ("20+", "2", "1") :
+// si le JS ne s'execute pas, le visiteur voit la bonne valeur, pas 0.
+// Le JS ne fait qu'animer le comptage, puis restaure le texte d'origine.
 const aboutSection = document.querySelector('#about');
-const counters = document.querySelectorAll('.count');
+const counters = Array.from(document.querySelectorAll('.count')).map(el => {
+    const raw = el.textContent.trim();
+    const match = raw.match(/^(\d+)(.*)$/); // ex: "20+" -> 20 et "+"
+    return {
+        el: el,
+        raw: raw,
+        target: match ? parseInt(match[1], 10) : null,
+        suffix: match ? match[2] : ''
+    };
+});
+
 let hasAnimated = false; // Pour ne jouer l'animation qu'une seule fois
 
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        // Si la section About est visible à l'écran et que l'animation n'a pas encore joué
+        // Si la section About est visible a l'ecran et que l'animation n'a pas encore joue
         if (entry.isIntersecting && !hasAnimated) {
             hasAnimated = true; // On bloque pour ne pas rejouer
-            
+
             counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
+                if (counter.target === null) return; // Pas un nombre : on n'y touche pas
+
                 const duration = 1500; // L'animation dure 1.5 secondes
-                const increment = target / (duration / 16); // Calcul pour 60 FPS
+                const increment = counter.target / (duration / 16); // Calcul pour 60 FPS
                 let current = 0;
 
                 const updateCounter = () => {
                     current += increment;
-                    if (current < target) {
-                        counter.innerText = Math.ceil(current);
+                    if (current < counter.target) {
+                        counter.el.textContent = Math.ceil(current) + counter.suffix;
                         requestAnimationFrame(updateCounter); // Boucle fluide
                     } else {
-                        // Quand c'est fini, on affiche le vrai chiffre
-                        // Si c'est 12 (les mois), on ajoute un petit "+" à la fin
-                        counter.innerText = target + (target === 12 ? '+' : '');
+                        // Quand c'est fini, on remet exactement le texte du HTML
+                        counter.el.textContent = counter.raw;
                     }
                 };
-                
+
                 updateCounter();
             });
         }
     });
-}, { threshold: 0.5 }); // Se déclenche quand 50% de la section est visible
+}, { threshold: 0.5 }); // Se declenche quand 50% de la section est visible
 
-if (aboutSection) {
+if (aboutSection && counters.length > 0) {
     statsObserver.observe(aboutSection);
 }
